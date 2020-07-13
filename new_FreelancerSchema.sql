@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2020/7/13 13:52:25                           */
+/* Created on:     2020/7/13 17:14:37                           */
 /*==============================================================*/
 
 
@@ -84,7 +84,7 @@ create table Recruit_Info
 (
    Rec_ID               int not null,
    User_ID              int,
-   Rec_Salary           int,
+   Rec_Salary           varchar(20),
    Rec_Location         varchar(80),
    Rec_TimeSchedule     varchar(80),
    Rec_Title            varchar(20),
@@ -94,6 +94,7 @@ create table Recruit_Info
    Rec_Desc             varchar(500),
    Rec_Experience       varchar(20),
    Rec_Education        varchar(10),
+   Tags                 varchar(40),
    primary key (Rec_ID)
 );
 
