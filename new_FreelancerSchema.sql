@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2020/7/13 17:14:37                           */
+/* Created on:     2020/7/14 10:21:58                           */
 /*==============================================================*/
 
 
@@ -82,19 +82,19 @@ create table Rec_Gr
 /*==============================================================*/
 create table Recruit_Info
 (
-   Rec_ID               int not null,
+   Rec_ID               int not null auto_increment,
    User_ID              int,
    Rec_Salary           varchar(20),
    Rec_Location         varchar(80),
    Rec_TimeSchedule     varchar(80),
-   Rec_Title            varchar(20),
-   Rec_Cate             varchar(10),
+   Rec_Title            varchar(30),
+   Rec_Cate             varchar(20),
    Rec_Enrolled         int,
    Rec_Quota            int,
-   Rec_Desc             varchar(500),
+   Rec_Desc             varchar(2000),
    Rec_Experience       varchar(20),
    Rec_Education        varchar(10),
-   Tags                 varchar(40),
+   Tags                 varchar(65),
    primary key (Rec_ID)
 );
 
@@ -117,7 +117,7 @@ create table Resume
 /*==============================================================*/
 create table User
 (
-   User_ID              int not null,
+   User_ID              int not null auto_increment,
    User_Name            varchar(25),
    Password             varchar(25),
    Phone                varchar(20),
