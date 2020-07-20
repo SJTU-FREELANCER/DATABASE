@@ -3,6 +3,8 @@
 -- Host: localhost    Database: testfreelancer
 -- ------------------------------------------------------
 -- Server version	8.0.19
+show variables like '%time_zone%';
+set global time_zone='+8:00';
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -232,7 +234,7 @@ CREATE TABLE `user` (
   `Password` varchar(25) DEFAULT NULL,
   `Phone` varchar(20) DEFAULT NULL,
   `Email` varchar(30) DEFAULT NULL,
-  `Role` tinyint(1) DEFAULT NULL,
+  `Role` int  DEFAULT NULL,
   PRIMARY KEY (`User_ID`),
   UNIQUE KEY `User_Name` (`User_Name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
